@@ -4,6 +4,8 @@ import codecs
 import requests
 import subprocess
 
+script_folder = os.path.dirname(os.path.abspath(__file__))
+
 #----------------------- settings -----------------------
 
 #set True if you want to export .mesh files
@@ -14,14 +16,14 @@ export_ktx = True
 #C:\Users\User\AppData\Local\Temp\Roblox\http
 robloxhttp = os.getenv('LOCALAPPDATA')+"\Temp\Roblox\http"
 #PVRTexTool CLI path
-extract = f"{os.path.dirname(os.path.abspath(__file__))}\extract.exe"
+extract = f"{script_folder}\extract.exe"
 
 #folder for .mesh
-meshpath = f"{os.path.dirname(os.path.abspath(__file__))}\mesh"
+meshpath = f"{script_folder}\mesh"
 #folder for .ktx
-ktxpath = f"{os.path.dirname(os.path.abspath(__file__))}\ktx"
+ktxpath = f"{script_folder}\ktx"
 #folder for .png, converted from .ktx folder
-pngpath = f"{os.path.dirname(os.path.abspath(__file__))}\png"
+pngpath = f"{script_folder}\png"
 
 #--------------------------------------------------------
 
